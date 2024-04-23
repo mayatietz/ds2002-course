@@ -1,4 +1,4 @@
-# Lab 7 - JavaScript Object Notation (JSON)
+# Lab 8 - JavaScript Object Notation (JSON)
 
 ## 0. Setup
 
@@ -19,10 +19,10 @@ The NOAA Aviation Weather API has built-in documentation (look who else uses Fas
 
 Retrieve data from this URL, which is for the KMCI (Kansas City) airport, output into JSON format, showing the last 12 hours, bound by a small geographic box:
 ```
-https://aviationweather.gov/api/data/metar?ids=KMCI&format=json&taf=false&hours=12&bbox=40%2C-90%2C45%2C-85
+curl -s "https://aviationweather.gov/api/data/metar?ids=KMCI&format=json&taf=false&hours=12&bbox=40%2C-90%2C45%2C-85" > aviation.json
 ```
 
-Note that you may need to wrap this URL in quotes when using `curl` from the command-line.
+Note that you need to wrap this URL in quotes when using `curl` from the command-line.
 
 Write a `bash` script that does the following:
 
@@ -43,7 +43,7 @@ Your script should output something like this with no more than 6 lines:
 
 ## 2. Parse JSON with Python
 
-1. Review the file `data/schacon.repos.json` and notice it lists the first 30 repositories owned by Scott Chacon in GitHub. Each entry has around 100 data points.
+1. Review the file [`data/schacon.repos.json`](data/schacon.repos.json) and notice it lists the first 30 repositories owned by Scott Chacon in GitHub. Each entry has around 100 data points.
 
 2. Recall that reading a file into Python looks something like this (in read-only mode):
 
